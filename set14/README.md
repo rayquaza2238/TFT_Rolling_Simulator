@@ -8,8 +8,9 @@ TFT Rolling Simulator for set 14. I would really appreciate some kind of feedbac
 
 ### Installation:
 # via exe Download:
-1. Go to the Google Drive Link and download all files in a desired folder.
-2. To open the Simulator you need to have all folders and files in the same directory. Do not change any names of the files.
+1. Go to the Google Drive Link https://drive.google.com/drive/folders/1uKNTjJMLr_sYKE_Rqs1zPJQaIHMf3xmB?usp=sharing
+   and download all the contents into a desired folder.
+3. To open the Simulator you need to have all folders and files in the same directory. Do not change any names of the files.
 # via python:
 1. Download the whole folder
 2. Go to your folder and open your Command Line
