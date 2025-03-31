@@ -1,0 +1,1 @@
+team_list = [None] * 10
