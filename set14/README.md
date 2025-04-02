@@ -14,10 +14,11 @@ TFT Rolling Simulator for set 14. I would really appreciate some kind of feedbac
 # via python:
 1. Download the whole folder
 2. Go to your folder and open your Command Line
-3. Type in:  python -m PyInstaller --onefile --windowed TFT_set14_rolling_sim.py
-4. dist folder will be added into the path
-5. Transfer the folder downloaded_images and downloaded_origins into the dist folder. Transfer niki-wichman-elderwoodtft.jpg into dist folder.
-6. Run TFT_set14_rolling_sim.exe
+3. Type in: pip install pygame
+4. Type in:  python -m PyInstaller --onefile --windowed TFT_set14_rolling_sim.py
+5. dist folder will be added into the path
+6. Transfer the folder downloaded_images and downloaded_origins into the dist folder. Transfer niki-wichman-elderwoodtft.jpg into dist folder.
+7. Run TFT_set14_rolling_sim.exe
 
 ### How to use the program:
 1. After opening TFT_set14_reroll_sim.exe a window will open.
@@ -29,6 +30,7 @@ TFT Rolling Simulator for set 14. I would really appreciate some kind of feedbac
 5. Start the Simulator
 6. Rolling and Fielding Units are the same as in the actual game, key binds are not implemented yet
 7. Set your TeamPlaner to highlight Units, you would like to roll for
+8. Set sound settings by opening the Soundsettings on the top right corner
 
 ### Known Problems:
 
