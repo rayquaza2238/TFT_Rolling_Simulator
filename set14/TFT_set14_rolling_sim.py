@@ -15,6 +15,7 @@ import shared_data
 import json
 from TeamPlaner import TeamPlaner
 from GameWindow import GameWindow
+from Sound_App import SoundController
 
 import sys
 
@@ -25,6 +26,7 @@ def start_game():
     stage = float(stage_scale.get())
     out_of_pool = out_pool_slider.get()
     champion_pool = create_champion_pool()
+    print(out_of_pool)
     
     odds = get_odds()
     champions_in_play = []
@@ -35,14 +37,12 @@ def start_game():
     if out_of_pool:
         champion_pool = game.remove_champs()
         game.champion_pool  = champion_pool
-    field = Field(game_state = game, champion_pool = champion_pool, three_stared_list = game.three_stared_list)
-    bank = Bank(game_state = game, field = field, champion_pool = champion_pool, three_stared_list = game.three_stared_list)
-    shop = Shop(game_state = game, odds = odds, champion_pool = champion_pool, bank = bank, field = field, three_stared_list = game.three_stared_list)
+    field = Field(game_state = game, champion_pool = champion_pool, three_stared_list = three_stared_list)
+    bank = Bank(game_state = game, field = field, champion_pool = champion_pool, three_stared_list = three_stared_list)
+    shop = Shop(game_state = game, odds = odds, champion_pool = champion_pool, bank = bank, field = field, three_stared_list = three_stared_list)
     label_output.config(text=f"Game gestartet!\nLevel: {level}, Stage: {stage}, Gold: {gold}")
-    GameWindow(root, game, shop, bank, field)
+    GameWindow(root, game, shop, bank, field,)
 
-
-import tkinter as tk
 
 # Tkinter-Hauptfenster
 root = Tk()
