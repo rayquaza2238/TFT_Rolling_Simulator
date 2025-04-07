@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Shop</title>
+
+    <style>
+        #gameUI {
+            text-align: center;
+        }
+
+        #gameField {
+            width: 100%;
+            height: 500px; /* Höhe des Spielfeldes anpassen */
+            background-image: url('niki-wichman-elderwoodtft.jpg'); /* Das Bild als Hintergrund */
+            background-size: cover; /* Bild wird skaliert, um den gesamten Bereich zu füllen */
+            background-position: center; /* Das Bild wird zentriert */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .game-slot {
+            width: 100px; /* Breite der Slots */
+            height: 100px; /* Höhe der Slots */
+            background-color: rgba(255, 255, 255, 0.5); /* Transparenter Hintergrund für die Slots */
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+  <div id="mainMenu">
+    <h1>Game Shop</h1>
+
+    <label for="levelSlider">Level: <span id="levelValue">1</span></label>
+    <input type="range" id="levelSlider" name="levelSlider" min="1" max="10" value="1" style="width: 300px;">
+    
+    <br><br>
+
+    <label for="goldSlider">Gold: <span id="goldValue">1</span></label>
+    <input type="range" id="goldSlider" name="goldSlider" min="1" max="200" value="1" style="width: 500px;">
+    
+    <br><br>
+    <input type="checkbox" id="activateOption" name="activateOption">
+    <label for="activateOption">Remove Champion out of pool based on Level</label>
+    <br><br>
+    <button id="startGameButton">Start Game</button>
+  </div>
+
+  <div id="gameUI" style="display: none;">
+    <h2>Spielfeld</h2>
+    <div id="gameField"></div> <!-- Das Spielfeld -->
+    <button id="rerollButton">Reroll Shop</button>
+</div>
+
+
+
+
+  </div>
+
+    <!-- Deine Skripte -->
+    <script src="champion.js"></script> <!-- shop.js danach -->
+    <script src="game.js"></script> <!-- game.js zuerst -->
+    <script src="shop.js"></script> <!-- shop.js danach -->
+    <script src="bank.js"></script> <!-- shop.js danach -->
+    <script src="field.js"></script> <!-- shop.js danach -->
+    <script src="main.js"></script> <!-- main.js zum Ausführen der Logik -->
+</body>
+</html>

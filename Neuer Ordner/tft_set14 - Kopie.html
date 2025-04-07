@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Shop</title>
+</head>
+<body>
+    <h1>Game Shop</h1>
+
+    <!-- Button für das Starten des Spiels -->
+    <label for="levelSlider">Level: <span id="levelValue">1</span></label>
+    <input type="range" id="levelSlider" name="levelSlider" min="1" max="10" value="1" style="width: 300px;">
+
+    <br><br>
+
+    <label for="goldSlider">Gold: <span id="goldValue">1</span></label>
+    <input type="range" id="goldSlider" name="goldSlider" min="1" max="200" value="1" style="width: 500px;">
+
+    <br><br>
+
+    <!-- Checkbox -->
+    <input type="checkbox" id="activateOption" name="activateOption">
+    <label for="activateOption">Remove Champion out of pool based on Level</label>
+    <br><br>
+    <button id="startGameButton">Start Game</button>
+    
+    <br><br>
+
+    <!-- Button für reroll_shop -->
+    <button id="rerollButton" disabled>Reroll Shop</button>
+    
+    <br><br>
+    <div>
+        <h3>Shop Slots</h3>
+        <pre id="shopSlotsOutput"></pre>
+      </div>
+      
+      <!-- Anzeige für Bank Slots -->
+      <div>
+        <h3>Bank Slots</h3>
+        <pre id="bankSlotsOutput"></pre>
+      </div>
+    <!-- Texteingabefeld für buy_slot -->
+    <label for="slotNumber">Slot Number:</label>
+    <input type="number" id="slotNumber" min="1" max="5">
+    <button id="buyButton" disabled>Buy Slot</button>
+      <br><br>
+    <label for="slotNumber_sell">Slot Number Sell:</label>
+    <input type="number" id="slotNumber_sell" min="1" max="5">
+    <button id="sellButton" disabled>Sell Slot</button>
+
+    <label for="slotNumber_bank_to_field">Slot Number Bank To Field:</label>
+    <input type="number" id="slotNumber_bank_to_field" min="1" max="9">
+
+
+    <label for="slotNumber_to_field">Slot Number To Field:</label>
+    <input type="number" id="slotNumber_to_field" min="1" max="24">
+    <button id="to_field_button" disabled>To Field</button>
+    <br><br>
+    <div> 
+    <h3>Field Slots</h3>
+    <pre id="fieldSlotsOutput"></pre>
+    </div>
+    <label for="slotbank_field_to_bank">Slot Bank, Field To Bank:</label>
+    <input type="number" id="slotbank_field_to_bank" min="1" max="9">
+    <label for="slotfield_field_to_bank">Slot Field, Field To Bank:</label>
+    <input type="number" id="slotfield_field_to_bank" min="1" max="24">
+    <button id="field_to_bank_button" disabled>To Bank</button>
+
+    <label for="field_sell">Field Sell:</label>
+    <input type="number" id="field_sell" min="1" max="24">
+    <button id="field_sellButton" disabled>Field Sell Slot</button>
+    <!-- Deine Skripte -->
+    <script src="champion.js"></script> <!-- shop.js danach -->
+    <script src="game.js"></script> <!-- game.js zuerst -->
+    <script src="shop.js"></script> <!-- shop.js danach -->
+    <script src="bank.js"></script> <!-- shop.js danach -->
+    <script src="field.js"></script> <!-- shop.js danach -->
+    <script src="main.js"></script> <!-- main.js zum Ausführen der Logik -->
+</body>
+</html>
